@@ -1,0 +1,224 @@
+#grid_index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "cuerpo"
+    "galeria"
+    "pie";
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+}
+
+@media screen and (max-width:768px) {
+    #grid_index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "cuerpo"
+        "galeria"
+        "pie";
+        grid-column-gap: 3rem;
+        grid-row-gap: 3rem;
+    }
+}
+
+#grid_pages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr 1fr 0.3fr;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "galeria cuerpo"
+    "pie pie";
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+}
+
+@media screen and (max-width:768px) {
+    #grid_pages {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.7fr 0.7fr 0.3fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "galeria"
+        "cuerpo"
+        "pie";
+        grid-column-gap: 3rem;
+        grid-row-gap: 3rem;
+    }
+}
+
+.pics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: all 2s;
+}
+
+.pics:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.styleEncabezados {
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border:rgb(170, 10, 10);
+    border-style:groove;
+    border-width: 1px;
+}
+
+.movMoto {
+    display: flex;
+    justify-content: left;
+    transition: all 2s;
+}
+
+.movMoto:hover {
+    transform: translate(75%, 0%);
+}
+
+body {
+    background-image: url(../img/back.png);
+    background-repeat:no-repeat;
+    background-size: 25rem;
+    background-position: top;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    grid-area: cuerpo;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    border-left: 0.5rem;
+    border-right: 0.5rem;
+    border-top: 3rem;
+    border-bottom: 3rem;
+}
+
+div {
+    grid-area: galeria;
+    display: flex;
+    justify-content: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+footer {
+    grid-area: pie;
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    transition: all 2s;
+}
+
+footer a:hover{
+    transform: translate(0%, -20%);
+}
+
+nav ul li {
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    list-style-type: none;
+    display: inline-block;
+    border-style: groove;
+    border-color: rgb(170, 10, 10);
+    padding: 10px;
+    width: 200px;
+    height: 50;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 2s;
+}
+
+nav ul li:hover {
+    transform: scale(1.05,1.05);
+    background-color: rgb(186, 186, 186, 0.8);
+}
+
+main h2{
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+main p{
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-top: 3rem;
+    border-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: all 1s;
+}
+
+main p:hover{
+        color: red;
+}
+
+
+main ul li {
+    list-style: none;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-top: 3rem;
+    border-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: all 1s;
+}
+
+main ul li:hover{
+    color: red;
+}
+
+
